@@ -117,6 +117,11 @@ body {
     fill: var(--desaturated-dark-blue);
 }
 
+.share-container{
+    opacity: 0;
+    pointer-events: none;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
