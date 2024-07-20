@@ -118,8 +118,35 @@ body {
 }
 
 .share-container{
-    opacity: 0;
+    height: 3.5rem;
+    width: 13.5rem;
+    padding: 0.1rem 1rem;
+    background-color: var(--very-dark-grayish-blue);
+    /* opacity: 0; */
     pointer-events: none;
+    position: absolute;
+    border-radius: 10px;
+    right: 20%;
+    bottom: 44%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.share-container::before{
+    content: "";
+    position: absolute;
+    border-top: 10px solid var(--very-dark-grayish-blue);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    right: 50%;
+}
+
+.share-text {
+    color: white;
+    letter-spacing: 5px;
 }
 
 .attribution {
