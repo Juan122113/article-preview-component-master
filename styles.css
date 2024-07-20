@@ -29,7 +29,7 @@ body {
 .article-preview {
     background-color: white;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: 730px;
     display: flex;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -107,10 +107,11 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .share-button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .share-icon {
@@ -118,20 +119,26 @@ body {
 }
 
 .share-container{
-    height: 3.5rem;
+    height: 3.3rem;
     width: 13.5rem;
     padding: 0.1rem 1rem;
     background-color: var(--very-dark-grayish-blue);
     /* opacity: 0; */
-    pointer-events: none;
+    /* pointer-events: none; */
+    cursor: auto;
     position: absolute;
     border-radius: 10px;
-    right: 20%;
-    bottom: 44%;
-    display: flex;
+    right: -350%;
+    bottom: 177.5%;
+    display: none;
     align-items: center;
     justify-content: space-evenly;
 }
+
+/* .share-container:hover {
+    
+    opacity: 1;
+} */
 
 .share-container::before{
     content: "";
@@ -141,12 +148,14 @@ body {
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
     top: 100%;
-    right: 50%;
+    right: 47.5%;
 }
 
 .share-text {
     color: white;
+    font-size: 0.8rem;
     letter-spacing: 5px;
+    opacity: 0.4;
 }
 
 .attribution {
