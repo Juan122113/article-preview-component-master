@@ -138,7 +138,7 @@ body {
 } */
 
 .share-button:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* .share-button.active:hover {
@@ -171,9 +171,9 @@ body {
     justify-content: space-evenly;
 }
 
-.share-container:hover {
+/* .share-container:hover {
     opacity: 1;
-}
+} */
 
 .share-container::before{
     content: "";
@@ -191,6 +191,20 @@ body {
     font-size: 0.8rem;
     letter-spacing: 5px;
     opacity: 0.4;
+}
+
+a {
+    /* opacity: 0; */
+}
+
+a img{
+    /* color: aqua; */
+    /* opacity: 0; */
+}
+
+a:hover {
+    /* color: aqua; */
+    opacity: 0.8;
 }
 
 .attribution {
