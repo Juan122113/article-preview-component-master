@@ -1,6 +1,7 @@
 let button = document.getElementById("btn");
 let shareCtn = document.getElementById("sharectn");
 let shareIcon = document.getElementById("share-icon");
+let body = document.getElementById("body-id");
 
 button.addEventListener('click', () => {
     if (shareCtn.style.display != "flex") {
@@ -16,3 +17,17 @@ button.addEventListener('click', () => {
         }
     
 })
+
+// body.addEventListener('click', () => {
+//     if (shareCtn.style.display == "flex") {
+//         button.style.backgroundColor = "var(--light-grayish-blue)";
+//         shareCtn.style.display = "none";
+//         // shareCtn.style.pointerEvents = "none";
+//         shareIcon.style.fill = "var(--desaturated-dark-blue)";
+//     }
+// })
+
+// document.getElementById('clickable-link').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     window.location.href = this.href;
+// })
