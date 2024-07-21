@@ -1,4 +1,4 @@
-let button = document.getElementById("btn");
+let button = document.getElementById("button");
 let shareCtn = document.getElementById("sharectn");
 let shareIcon = document.getElementById("share-icon");
 let body = document.getElementById("body-id");
