@@ -4,7 +4,7 @@ let shareIcon = document.getElementById("share-icon");
 
 button.addEventListener('click', () => {
     if (shareCtn.style.display != "flex") {
-        button.style.backgroundColor = "var(--very-dark-grayish-blue)";
+        button.style.backgroundColor = "var(--desaturated-dark-blue)";
         shareCtn.style.display = "flex";
         // shareCtn.style.pointerEvents = "auto";
         shareIcon.style.fill = "white";
