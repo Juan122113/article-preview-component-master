@@ -193,14 +193,14 @@ body {
     opacity: 0.4;
 }
 
-a {
+/* a { */
     /* opacity: 0; */
-}
+/* } */
 
-a img{
+/* a img{ */
     /* color: aqua; */
     /* opacity: 0; */
-}
+/* } */
 
 a:hover {
     /* color: aqua; */
@@ -260,10 +260,10 @@ a:hover {
         top: 5px;
     }
 
-    .share-sup-cont{
+    /* .share-sup-cont{ */
         /* display: none; */
 
-    }
+    /* } */
 
     .share-button {
         position: relative;
@@ -282,7 +282,7 @@ a:hover {
         right: 0;
         top: -110px;
         /* bottom: -100%; */
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-evenly;
         /* opacity: 0; */
