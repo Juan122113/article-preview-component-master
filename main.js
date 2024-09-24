@@ -13,7 +13,11 @@ const elementsKeys = Object.keys(elements);
 console.log(elementsKeys);
 
 const handleClick = (e) => {
-
+    elementsKeys.forEach(element => {
+        if (shareCtn.style.display != "flex") {
+            element.style.elements[element] =
+        }
+    })
 }
 
 button.addEventListener('click', () => {
