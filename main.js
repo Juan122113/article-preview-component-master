@@ -15,7 +15,7 @@ console.log(elementsKeys);
 const handleClick = (e) => {
     elementsKeys.forEach(element => {
         if (shareCtn.style.display != "flex") {
-            element.style.elements[element] =
+            // element.style.elements[element] =
         }
     })
 }
