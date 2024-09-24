@@ -1,7 +1,20 @@
-let button = document.getElementById("button");
-let shareCtn = document.getElementById("sharectn");
-let shareIcon = document.getElementById("share-icon");
-let body = document.getElementById("body-id");
+const button = document.getElementById("button");
+const shareCtn = document.getElementById("sharectn");
+const shareIcon = document.getElementById("share-icon");
+
+const elements = {
+    button: "backgroundColor",
+    shareCtn: "display",
+    shareIcon: "fill"
+};
+
+const elementsKeys = Object.keys(elements);
+
+console.log(elementsKeys);
+
+const handleClick = (e) => {
+
+}
 
 button.addEventListener('click', () => {
     if (shareCtn.style.display != "flex") {
