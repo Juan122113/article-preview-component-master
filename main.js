@@ -14,13 +14,17 @@ function handleShareIcon(shareIcon, isVisible) {
     shareIcon.style.fill = isVisible ? "var(--desaturated-dark-blue)" : "white";
 }
 
+function handleVarious(isVisible) {
+    handleButton(button, isVisible);
+    handleShareCtn(shareCtn, isVisible);
+    handleShareIcon(shareIcon, isVisible);
+}
+
 function handleEvent() {
     const isVisible = shareCtn.style.display === "flex";
     console.log(isVisible);
 
-    handleButton(button, isVisible);
-    handleShareCtn(shareCtn, isVisible)
-    handleShareIcon(shareIcon, isVisible)
+    handleVarious(isVisible)
 }
 
 button.addEventListener('click', handleEvent);
