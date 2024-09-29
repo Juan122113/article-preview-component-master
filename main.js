@@ -15,8 +15,9 @@ function initializeElements() {
     console.log(elements);
     for (let element in elements) {
         console.log(elements[element]);
-        let initialIdElements = document.getElementById(elements.element);
-        console.log(initialIdElements)
+        let initialIdElements = [];
+        initialIdElements.push(document.getElementById(elements[element]));
+        console.log(initialIdElements);
     }
 
 }
