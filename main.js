@@ -15,14 +15,22 @@ function initializeElements() {
     console.log(elements);
     for (let element in elements) {
         console.log(elements[element]);
-        let initialIdElements = [];
-        initialIdElements.push(document.getElementById(elements[element]));
-        console.log(initialIdElements);
+        // let initialIdElements = [];
+        // initialIdElements.push(document.getElementById(elements[element]));
+        // console.log(initialIdElements);
+        return element = document.getElementById(elements[element]);
+        console.log(element);
     }
 
 }
 
-initializeElements();
+function initializeApp() {
+    const elements2 = initializeElements();
+    console.log(elements2); 
+}
+
+initializeApp();
+console.log(initializeApp());
 
 function handleButton(button, isVisible) {
     button.style.backgroundColor = isVisible ? "var(--light-grayish-blue)" : "var(--desaturated-dark-blue)";
