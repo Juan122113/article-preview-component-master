@@ -20,7 +20,7 @@ function initializeElements() {
     };
 }
 
-function updateElementStyles(elements, isVisible) {
+function updateElementStyles(elements, isVisible, styles) {
     const currentStyle = isVisible ? styles.visible : styles.hidden;
     elements.button.style.backgroundColor = currentStyle.button;
     elements.shareCtn.style.display = currentStyle.shareCtn;
@@ -29,7 +29,7 @@ function updateElementStyles(elements, isVisible) {
 
 function toggleShareVisibility(elements) {
     const isVisible = elements.shareCtn.style.display === "flex";
-    updateElementStyles(elements, isVisible);
+    updateElementStyles(elements, isVisible, styles);
 }
 
 function setupEventListeners(elements) {
