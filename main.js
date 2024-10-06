@@ -12,13 +12,19 @@ const styles = {
     }
 };
 
-function initializeElements() {
-    return {
-        button: document.getElementById("button"),
-        shareCtn: document.getElementById("sharectn"),
-        shareIcon: document.getElementById("shareicon")
-    };
+const elements = {
+    button: document.getElementById("button"),
+    shareCtn: document.getElementById("sharectn"),
+    shareIcon: document.getElementById("shareicon")
 }
+
+// function initializeElements() {
+//     return {
+//         button: document.getElementById("button"),
+//         shareCtn: document.getElementById("sharectn"),
+//         shareIcon: document.getElementById("shareicon")
+//     };
+// }
 
 function updateElementStyles(elements, isVisible, styles) {
     const currentStyle = isVisible ? styles.visible : styles.hidden;
@@ -36,9 +42,11 @@ function setupEventListeners(elements) {
     elements.button.addEventListener('click', () => toggleShareVisibility(elements));
 }
 
-function initializeApp() {
-    const elements = initializeElements();
-    setupEventListeners(elements);
-}
+setupEventListeners(elements);
 
-initializeApp();
+// function initializeApp() {
+//     const elements = initializeElements();
+//     setupEventListeners(elements);
+// }
+
+// initializeApp();
