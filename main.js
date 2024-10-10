@@ -18,11 +18,11 @@ const elements = {
     shareIcon: document.getElementById("shareicon")
 }
 
-const isVisible = elements.shareCtn.style.display === "flex";
+// const isVisible = elements.shareCtn.style.display === "flex";
 
 // document.addEventListener('DOMContentLoaded', isVisible);
 
-elements.button.addEventListener('click', () => toggleShareVisibility(elements));
+elements.button.addEventListener('click', () => updateElementStyles(elements, styles));
 
 // function initializeElements() {
 //     return {
@@ -32,7 +32,9 @@ elements.button.addEventListener('click', () => toggleShareVisibility(elements))
 //     };
 // }
 
-function updateElementStyles(elements, isVisible, styles) {
+function updateElementStyles(elements, styles) {
+    const isVisible = elements.shareCtn.style.display === "flex";
+    console.log(isVisible);
     const currentStyle = isVisible ? styles.visible : styles.hidden;
     elements.button.style.backgroundColor = currentStyle.button;
     elements.shareCtn.style.display = currentStyle.shareCtn;
