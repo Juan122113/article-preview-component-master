@@ -18,7 +18,7 @@ const elements = {
     button: document.getElementById("button"),
     shareCtn: document.getElementById("sharectn"),
     shareIcon: document.getElementById("shareicon")
-}
+};
 
 // const isVisible = elements.shareCtn.style.display === "flex";
 
@@ -37,6 +37,13 @@ elements.button.addEventListener('click', () => updateElementStyles(elements, st
 function updateElementStyles(elements, styles) {
     const isVisible = elements.shareCtn.style.display === "flex";
     console.log(isVisible);
+
+    const atr = {
+        button: backgroundColor,
+        shareCtn: display,
+        shareIcon: fill
+    };
+    
     const currentStyle = isVisible ? styles.visible : styles.hidden;
     elements.button.style.backgroundColor = currentStyle.button;
     elements.shareCtn.style.display = currentStyle.shareCtn;
