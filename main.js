@@ -39,15 +39,23 @@ function updateElementStyles(elements, styles) {
     console.log(isVisible);
 
     const atr = {
-        button: backgroundColor,
-        shareCtn: display,
-        shareIcon: fill
+        button: "backgroundColor",
+        shareCtn: "display",
+        shareIcon: "fill"
     };
     
     const currentStyle = isVisible ? styles.visible : styles.hidden;
-    elements.button.style.backgroundColor = currentStyle.button;
-    elements.shareCtn.style.display = currentStyle.shareCtn;
-    elements.shareIcon.style.fill = currentStyle.shareIcon;
+    // elements.button.style.backgroundColor = currentStyle.button;
+    // elements.shareCtn.style.display = currentStyle.shareCtn;
+    // elements.shareIcon.style.fill = currentStyle.shareIcon;
+
+    for (let element in elements) {
+        //for (let atrs in atr) {
+            const currentStyle = isVisible ? styles.visible : styles.hidden;
+        console.log(element)
+        elements[element].style.atr[element] = currentStyle.elements[element];
+        //}
+    }
 }
 
 // function toggleShareVisibility(elements) {
