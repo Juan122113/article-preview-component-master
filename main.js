@@ -51,9 +51,12 @@ function updateElementStyles(elements, styles) {
 
     for (let element in elements) {
         //for (let atrs in atr) {
-            const currentStyle = isVisible ? styles.visible : styles.hidden;
-        console.log(element)
-        elements[element].style.atr[element] = currentStyle.elements[element];
+        const currentStyle = isVisible ? styles.visible : styles.hidden;
+        console.log(element);
+        console.log(elements[element]);
+        console.log(atr[element]);
+        console.log(currentStyle[element]);
+        elements[element].style[atr[element]] = currentStyle[element];
         //}
     }
 }
