@@ -1,14 +1,12 @@
-const desaturatedDarkBlue = "var(--desaturated-dark-blue)";
-
 // Definición de estilos
 const styles = {
     visible: {
         button: "var(--light-grayish-blue)",
-        shareIcon: desaturatedDarkBlue,
+        shareIcon: "var(--desaturated-dark-blue)",
         shareCtn: "none"
     },
     hidden: {
-        button: desaturatedDarkBlue,
+        button: "var(--desaturated-dark-blue)",
         shareIcon: "white",
         shareCtn: "flex"
     }
