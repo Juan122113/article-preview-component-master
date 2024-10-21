@@ -22,7 +22,7 @@ const elements = {
 
 // document.addEventListener('DOMContentLoaded', isVisible);
 
-elements.button.addEventListener('click', () => updateElementStyles(elements, styles));
+// elements.button.addEventListener('click', () => updateElementStyles(elements, styles, styleAttributes));
 
 // function initializeElements() {
 //     return {
@@ -32,17 +32,17 @@ elements.button.addEventListener('click', () => updateElementStyles(elements, st
 //     };
 // }
 
-function updateElementStyles(elements, styles) {
-    const isVisible = elements.shareCtn.style.display === "flex";
-    console.log(isVisible);
+const styleAttributes = {
+    button: "backgroundColor",
+    shareCtn: "display",
+    shareIcon: "fill"
+};
 
-    const atr = {
-        button: "backgroundColor",
-        shareCtn: "display",
-        shareIcon: "fill"
-    };
+function updateElementStyles(elements, styleAttributes, isVisible, currentStyle) {
+    // const isVisible = elements.shareCtn.style.display === "flex";
+    console.log(isVisible);
     
-    const currentStyle = isVisible ? styles.visible : styles.hidden;
+    // const currentStyle = isVisible ? styles.visible : styles.hidden;
     console.log(currentStyle);
     // elements.button.style.backgroundColor = currentStyle.button;
     // elements.shareCtn.style.display = currentStyle.shareCtn;
@@ -50,19 +50,26 @@ function updateElementStyles(elements, styles) {
 
     for (let element in elements) {
         //for (let atrs in atr) {
-        console.log(element);
-        console.log(elements[element]);
-        console.log(atr[element]);
-        console.log(currentStyle[element]);
-        elements[element].style[atr[element]] = currentStyle[element];
+        elements[element].style[styleAttributes[element]] = currentStyle[element];
         //}
     }
 }
 
-// function toggleShareVisibility(elements) {
-//     const isVisible = elements.shareCtn.style.display === "flex";
-//     updateElementStyles(elements, isVisible, styles);
-// }
+function toggleStyles(elements, styles, styleAttributes, isVisible) {
+    const currentStyle = isVisible ? styles.visible : styles.hidden;
+    updateElementStyles(elements, styleAttributes, isVisible, currentStyle);
+}
+
+function toggleShareVisibility(elements, styles, styleAttributes) {
+    const isVisible = elements.shareCtn.style.display === "flex";
+    toggleStyles(elements, styles, styleAttributes, isVisible);
+}
+
+function setupEventListeners(elements, styles, styleAttributes) {
+    elements.button.addEventListener('click', () => toggleShareVisibility(elements, styles, styleAttributes));
+}
+
+setupEventListeners(elements, styles, styleAttributes);
 
 // function setupEventListeners(elements) {
 //     elements.button.addEventListener('click', () => toggleShareVisibility(elements));
