@@ -38,9 +38,9 @@ const styleAttributes = {
     shareIcon: "fill"
 };
 
-function updateElementStyles(elements, styleAttributes, isVisible, currentStyle) {
+function updateElementStyles(elements, styleAttributes, currentStyle) {
     // const isVisible = elements.shareCtn.style.display === "flex";
-    console.log(isVisible);
+    // console.log(isVisible);
     
     // const currentStyle = isVisible ? styles.visible : styles.hidden;
     console.log(currentStyle);
@@ -57,7 +57,7 @@ function updateElementStyles(elements, styleAttributes, isVisible, currentStyle)
 
 function toggleStyles(elements, styles, styleAttributes, isVisible) {
     const currentStyle = isVisible ? styles.visible : styles.hidden;
-    updateElementStyles(elements, styleAttributes, isVisible, currentStyle);
+    updateElementStyles(elements, styleAttributes, currentStyle);
 }
 
 function toggleShareVisibility(elements, styles, styleAttributes) {
@@ -65,11 +65,14 @@ function toggleShareVisibility(elements, styles, styleAttributes) {
     toggleStyles(elements, styles, styleAttributes, isVisible);
 }
 
-function setupEventListeners(elements, styles, styleAttributes) {
-    elements.button.addEventListener('click', () => toggleShareVisibility(elements, styles, styleAttributes));
-}
+elements.button.addEventListener('click', () => toggleShareVisibility(elements, styles, styleAttributes));
 
-setupEventListeners(elements, styles, styleAttributes);
+
+// function setupEventListeners(elements, styles, styleAttributes) {
+//     elements.button.addEventListener('click', () => toggleShareVisibility(elements, styles, styleAttributes));
+// }
+
+// setupEventListeners(elements, styles, styleAttributes);
 
 // function setupEventListeners(elements) {
 //     elements.button.addEventListener('click', () => toggleShareVisibility(elements));
